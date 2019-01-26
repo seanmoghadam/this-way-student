@@ -6,7 +6,7 @@ export default {
     nodeEnv: env.NODE_ENV || "development",
     adminEmail: "admin@admin.admin", //written in the database -login
     adminPw: "Hi123456", //written in the database - login
-    mongodbUri: "mongodb://admin:hi123@ds259258.mlab.com:59258/thisway",
+    mongodbUri: "mongodb://ds259258.mlab.com:59258/thisway",
     db: "thisway",
     port: env.PORT || 8080,
     host: env.HOST || "0.0.0.0",
