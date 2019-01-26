@@ -1,0 +1,376 @@
+@import "../common/mixins";
+
+#Attractions {
+  .description {
+    padding: 1em;
+    margin-top: 0;
+    text-align: center;
+  }
+  & > hr {
+    margin-bottom: 2.5em;
+  }
+}
+
+#AttractionOverview {
+  margin: 0;
+  padding: 0;
+
+  .singleAttraction {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    @include resetList;
+    padding: 0.3em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    &__imageAndDescription {
+      padding: 0.4em;
+      .image-gallery {
+        img {
+          border-radius: 3px;
+          min-height: 5em;
+          background: #535353;
+        }
+
+      }
+      &__description {
+        padding: 0.5em;
+
+        .title {
+          font-size: 1.2em;
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
+        .shortDescription {
+          padding: 0;
+          margin: 0;
+
+        }
+      }
+    }
+    hr {
+      width: 70%;
+      margin: 0.5em auto;
+
+    }
+    &__infoArea {
+      padding: 0.4em;
+      &__lower, &__upper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        & > div {
+          margin: 0.2em 0;
+        }
+        p {
+          padding: 0;
+          margin: 0;
+        }
+        &__info {
+
+        }
+        .headline {
+          text-decoration: underline;
+
+        }
+        .value {
+
+        }
+      }
+    }
+    &__buttonArea {
+      border-top: 1px solid #EEEEEE;
+      padding: 1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      button {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .attractionsButton {
+        color: white;
+        background: #293739;
+        svg {
+          margin-left: 0.5em;
+          fill: white;
+          height: 1.4em;
+        }
+
+      }
+      .detailsButton {
+        background: #DBBC85;
+        border-color: #DBBC85;
+      }
+    }
+  }
+}
+
+#AttractionDetails {
+  .attractionInfo {
+    .image-gallery {
+      width: calc(100% + 1.5em);
+      margin-left: -1em;
+      margin-top: -0.85em;
+    }
+    .image-gallery-slide-wrapper {
+      max-height: 30em;
+      overflow: hidden;
+    }
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      background: white;
+    }
+    &__title {
+
+    }
+    &__tabs {
+      .react-tabs__tab-list {
+        height: 1em;
+        h4 {
+          margin-top: -1em;
+        }
+      }
+    }
+    &__description {
+      margin-top: 1em;
+      margin-bottom: 6em;
+
+    }
+  }
+
+}
+
+#AttractionList {
+  padding: 0;
+  @include resetList;
+  margin: -2.5em 0 0 0;
+  font-size: 12px;
+
+  .attractionListItem {
+    hr {
+      margin: 0;
+      padding: 0;
+    }
+    &__container {
+      color: black;
+      padding: 1em 0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1rem;
+      &:hover {
+        background: #F9F9F9;
+      }
+
+      img {
+        height: auto;
+        width: 15%;
+        margin-right: 0.5em;
+        border: none;
+
+      }
+
+      .title {
+        text-align: left;
+
+      }
+
+    }
+
+  }
+}
+
+#ClickAbleAttractions {
+  font-size: 1.2rem;
+  border-radius: 4px;
+  @include resetList();
+  overflow: auto;
+  max-height: 50vh;
+  -webkit-box-shadow: inset 0 0 24px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0 0 24px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 24px -7px rgba(0, 0, 0, 0.75);
+  padding: 0.5em;
+  .img-thumbnail {
+    width: 3em;
+    margin-right: 1em;
+  }
+
+  figure {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  li {
+    transition: all ease-in-out 0.2s;
+    border-bottom: 1px #637274 solid;
+    padding: 0.5em;
+    margin: 0.2em;
+  }
+
+  li:hover {
+    cursor: pointer;
+    border: 1px solid #CA5949;
+    border-radius: 5px;
+
+  }
+  &:last-child {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #Attractions {
+    .description {
+
+    }
+  }
+  #AttractionOverview {
+
+    .singleAttraction {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1399px) {
+  #Attractions {
+    .description {
+
+    }
+  }
+  #AttractionOverview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    .singleAttraction {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__infoArea {
+        &__lower, &__upper {
+          &__info {
+
+          }
+          .headline {
+
+          }
+          .value {
+
+          }
+        }
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  #Attractions {
+    .description {
+
+    }
+  }
+  #AttractionOverview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    .singleAttraction {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__infoArea {
+        &__lower, &__upper {
+          &__info {
+
+          }
+          .headline {
+
+          }
+          .value {
+
+          }
+        }
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+}

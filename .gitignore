@@ -1,0 +1,14 @@
+# ui specific
+node_modules/
+
+# Webstorm specific
+.idea
+workspace.xml
+
+.eslintrc
+SAE-Students-Awards-Registration-Form.pdf
+
+ThisWay.mp4
+
+.DS_Store
+.idea

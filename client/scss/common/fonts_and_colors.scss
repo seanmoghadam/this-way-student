@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Libre Baskerville;
+  src: url(fonts/LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+  font-family: Playfair Display;
+  src: url(fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+$uiFont: "Roboto";
+
+$mainTextFont: "Libre Baskerville";
+
+$HeadlineFont: "Playfair Display";
+
+//colors
+
+$mainBackgroundColor: #FAFAFA;
+
+$mainBorderColor: #EB973E;
+
+$footerColor: #EB973E;

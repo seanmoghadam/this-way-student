@@ -1,0 +1,256 @@
+@import "../common/mixins";
+
+#signUpForm, #loginForm {
+  max-width: 60em;
+  margin: 1em auto 10em;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 60vh;
+  button[type=submit] {
+    margin-top: 1em;
+    background: #72B354;
+    border: #72B354;
+    margin-bottom: 0.5em;
+    svg {
+      fill: white;
+      height: 1em;
+      margin-bottom: -0.15em;
+    }
+
+  }
+  label {
+    font-weight: normal;
+  }
+  .form-group {
+    position: relative;
+  }
+  input[type=submit] {
+    background: #72B354;
+    border: #72B354;
+    svg {
+      fill: white;
+      height: 1em;
+      margin-bottom: -0.15em;
+    }
+  }
+  .infoArea {
+    background: rgba(224, 128, 94, 0.21);
+    padding: 0.5em;
+    margin: 1em 0;
+    border-radius: 3px;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .terms {
+    text-align: center;
+  }
+}
+
+#NewAttraction {
+  .newAttractionForm {
+    img {
+      width: 100%;
+    }
+    .btn-danger {
+      margin-top: 0.5em;
+    }
+    .mapInput {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .fileInput {
+      #files {
+        width: 100% !important; //default overwrite
+        height: 100px !important; //default overwrite
+        padding: 1em;
+        text-align: center;
+      }
+
+    }
+    .submitButton {
+      display: flex;
+      justify-content: center;
+
+    }
+    .descriptionInput {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+      .ql-container > div {
+        border-radius: 0 0 4px 4px;
+        min-height: 10em;
+      }
+
+      .ql-toolbar {
+        border-radius: 4px 4px 0 0;
+      }
+
+    }
+    .title {
+
+    }
+    .preview {
+      ul {
+        @include resetList();
+        li {
+          display: flex;
+          justify-content: center;
+          flex-flow: column;
+          align-items: center;
+          padding: 1em;
+          img {
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #signUpForm, #loginForm {
+    button[type=submit] {
+
+      svg {
+
+      }
+
+    }
+    label {
+    }
+    .form-group {
+    }
+    input[type=submit] {
+
+      svg {
+
+      }
+    }
+    .infoArea {
+
+      p {
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1399px) {
+  #signUpForm, #loginForm {
+    button[type=submit] {
+
+      svg {
+
+      }
+
+    }
+    label {
+    }
+    .form-group {
+    }
+    input[type=submit] {
+
+      svg {
+
+      }
+    }
+    .infoArea {
+
+      p {
+
+      }
+    }
+  }
+  #NewAttraction {
+    .newAttractionForm {
+      .mapInput {
+
+      }
+      .fileInput {
+
+      }
+      .submitButton {
+
+      }
+      .description {
+
+      }
+      .title {
+
+      }
+      .preview {
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          li {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #signUpForm, #loginForm {
+    button[type=submit] {
+
+      svg {
+
+      }
+
+    }
+    label {
+    }
+    .form-group {
+    }
+    input[type=submit] {
+
+      svg {
+
+      }
+    }
+    .infoArea {
+
+      p {
+
+      }
+    }
+  }
+  #NewAttraction {
+    .newAttractionForm {
+      .mapInput {
+
+      }
+      .fileInput {
+
+      }
+      .submitButton {
+
+      }
+      .description {
+
+      }
+      .title {
+
+      }
+      .preview {
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          li {
+
+          }
+        }
+      }
+    }
+  }
+}

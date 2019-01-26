@@ -1,0 +1,91 @@
+//scss external libs
+@import "libs/bootstrap_buttons_forms";
+@import "libs/react-tabs";
+@import "libs/image-gallery";
+@import "libs/wysiwyg";
+@import "libs/timePicker";
+@import "libs/howler";
+//scss common styling
+@import "common/fonts_and_colors";
+@import "common/mixins";
+@import "common/animations";
+@import "common/common";
+
+body {
+  font-family: 'Roboto', serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #535353;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Playfair Display", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.libContainer {
+  display: none;
+}
+
+.noTransition {
+  transition: none !important;
+}
+
+.noAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 1em;
+  .btn {
+    margin-top: 1em;
+  }
+}
+
+//scss component styling
+@import "components/adminLists";
+@import "components/stars";
+@import "components/dashboard";
+@import "components/popup_container";
+@import "components/user";
+@import "components/comments";
+@import "components/error";
+@import "components/footer";
+@import "components/navigation";
+@import "components/home";
+@import "components/routes";
+@import "components/attractions";
+@import "components/forms";
+@import "components/player_navigation";
+@import "components/guide";
+@import "components/cookie_banner";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

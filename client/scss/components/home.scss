@@ -1,0 +1,320 @@
+@import "../common/mixins";
+
+#landingPage {
+  .mapArea {
+    height: calc(100vh - 5em);
+    width: 100%;
+    position: relative;
+    background: url(../images/background_map.jpg) no-repeat center;
+    background-size: cover;
+
+    &__textContainer {
+      position: absolute;
+      left: 0;
+      max-width: 60em;
+      margin: 0 auto;
+      top: 25vh;
+      width: 12em;
+      &__singleText {
+        padding: 0.3em 0.5em 0.3em 0.8em;
+        background: #5B7573;
+        color: white;
+        font-weight: normal;
+        width: auto;
+        display: inline-block;
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        margin-left: -0.2em;
+        font-size: 1.2em;
+
+      }
+    }
+    &__buttonContainer {
+      position: absolute;
+      bottom: 15vh;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+      &__startButton {
+        font-size: 1.1em;
+        background-color: #E0805E;
+        border: none;
+        padding-top: 0.6em;
+      }
+    }
+  }
+  .introductionArea {
+
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2.5em 1em 3em 1em;
+
+    &__iconArea {
+      @supports not (display: grid) {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin: 3em 0;
+      grid-gap: 5px;
+
+      &__singleIcon {
+        @supports not (display: grid) {
+          width: calc(50% - 5px);
+          margin: 2.5px;
+          height: auto;
+        }
+        border-radius: 3px;
+        background: #DBBC85;
+        min-height: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column-reverse;
+        padding: 14px;
+        color: white;
+        text-align: center;
+        img {
+          height: 4em;
+          width: 4em;
+        }
+        &__infoText {
+
+        }
+      }
+
+      .leftUpper, .rightLower {
+        background: #5F7374;
+      }
+
+    }
+  }
+
+  .infoArea {
+    background: #5F7374;
+    color: white;
+    padding: 1em;
+
+    &__content {
+      max-width: 1300px;
+      margin: 3em auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      img {
+        width: 100%;
+        max-width: 15em;
+        margin: 0 auto;
+        border-radius: 3px;
+      }
+
+    }
+  }
+
+  .socialArea {
+    background: #5F7374;
+
+    padding: 2em 1em 3em 1em;
+    color: white;
+    &__socialIcons {
+      max-width: 1300px;
+      @include resetList();
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+      &__iconContainer {
+        border: 1px solid white;
+        border-radius: 50px;
+        padding: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2em;
+          height: 2em;
+          svg {
+            height: 2em;
+            width: 2em;
+            fill: white;
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #landingPage {
+    .mapArea {
+      height: calc(100vh - 3em);
+    }
+    .introductionArea {
+      &__iconArea {
+        &__singleIcon {
+          img {
+          }
+          &__infoText {
+          }
+        }
+
+        .leftUpper, .rightLower {
+        }
+
+      }
+    }
+    .infoArea {
+
+      &__content {
+
+        img {
+
+        }
+
+      }
+    }
+    .socialArea {
+      &__socialIcons {
+
+        &__iconContainer {
+
+          a {
+
+            svg {
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+  #landingPage {
+    .mapArea {
+      &__textContainer {
+        left: 20%;
+        transform: translateX(-50%);
+        &__singleText {
+
+        }
+      }
+    }
+    .introductionArea {
+      margin: 6em auto 8em;
+      &__iconArea {
+        &__singleIcon {
+          min-height: 15em;
+          img {
+          }
+          &__infoText {
+          }
+        }
+
+        .leftUpper, .rightLower {
+        }
+
+      }
+    }
+    .infoArea {
+
+      &__content {
+
+        img {
+
+        }
+
+      }
+    }
+    .socialArea {
+      &__socialIcons {
+
+        &__iconContainer {
+
+          a {
+
+            svg {
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  #landingPage {
+    .mapArea {
+      &__textContainer {
+        left: calc(50% - 25em);
+        transform: translateX(-50%);
+
+      }
+    }
+    .introductionArea {
+      margin: 6em auto 8em;
+      &__iconArea {
+        &__singleIcon {
+          min-height: 15em;
+          img {
+          }
+          &__infoText {
+          }
+        }
+
+        .leftUpper, .rightLower {
+        }
+
+      }
+    }
+    .infoArea {
+
+      &__content {
+
+        img {
+
+        }
+
+      }
+    }
+    .socialArea {
+      &__socialIcons {
+
+        &__iconContainer {
+
+          a {
+
+            svg {
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+}

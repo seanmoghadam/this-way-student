@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7910.86 3746 54.087 59.846">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: rgba(255,255,255,0);
+            }
+
+            .cls-2 {
+            fill: none;
+            stroke: rgba(112,112,112,0.01);
+            stroke-width: 0px;
+            }
+
+            .cls-3 {
+            fill: #fff;
+            stroke: #e1bb7d;
+            stroke-width: 3px;
+            }
+
+            .cls-4, .cls-5 {
+            stroke: none;
+            }
+
+            .cls-5 {
+            fill: #fdfdfd;
+            }
+        </style>
+    </defs>
+    <g id="Group_48" data-name="Group 48" transform="translate(7847.86 2811)">
+        <g id="Path_35" data-name="Path 35" class="cls-1" transform="translate(63 962.066)">
+            <path class="cls-4"
+                  d="M 51.60547637939453 30.7803783416748 L 2.501485109329224 30.7803783416748 L 8.994633674621582 1.999998211860657 L 45.34115600585938 1.999998211860657 L 51.60547637939453 30.7803783416748 Z"/>
+            <path class="cls-5"
+                  d="M 49.12332534790039 28.78037643432617 L 43.72964477539062 3.999999284744263 L 10.59368705749512 3.999999284744263 L 5.00298023223877 28.78037643432617 L 49.12332534790039 28.78037643432617 M 54.08761978149414 32.78037643432617 L -1.220364083565073e-06 32.78037643432617 L 7.39558744430542 -6.717257861055259e-07 L 46.95266723632812 -6.717257861055259e-07 L 54.08761978149414 32.78037643432617 Z"/>
+        </g>
+        <g id="Group_47" data-name="Group 47" transform="translate(63 935)">
+            <g id="Group_46" data-name="Group 46">
+                <g id="Group_44" data-name="Group 44">
+                    <path id="Path_33" data-name="Path 33" class="cls-2" d="M0,0H52.98V52.98H0Z"/>
+                </g>
+                <g id="Group_45" data-name="Group 45" transform="translate(11.038 4.415)">
+                    <path id="Path_34" data-name="Path 34" class="cls-3"
+                          d="M20.453,2A15.441,15.441,0,0,0,5,17.453c0,11.589,15.453,28.7,15.453,28.7s15.453-17.108,15.453-28.7A15.441,15.441,0,0,0,20.453,2Zm0,20.971a5.519,5.519,0,1,1,5.519-5.519A5.521,5.521,0,0,1,20.453,22.971Z"
+                          transform="translate(-5 -2)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

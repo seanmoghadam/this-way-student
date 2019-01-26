@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "es2015",
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    [
+      "file-loader",
+      {
+        "name": "[name][hash].[ext]",
+        "extensions": [
+          "png",
+          "jpg",
+          "jpeg",
+          "gif",
+          "svg"
+        ],
+        "publicPath": "/images/public",
+        "outputPath": "client/images/public",
+        "context": ""
+      }
+    ]
+  ]
+}

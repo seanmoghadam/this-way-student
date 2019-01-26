@@ -1,0 +1,25 @@
+#adminList {
+  .description {
+    text-align: center;
+  }
+  tr {
+    border-bottom: 1px solid #637274;
+  }
+  td, th {
+    padding: .3em;
+    max-width: 1em;
+    overflow: scroll;
+  }
+  th {
+    border-bottom: 2px solid #637274;
+  }
+  svg {
+
+    padding: 0.3em;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+}

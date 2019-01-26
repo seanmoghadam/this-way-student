@@ -1,0 +1,340 @@
+@import "../common/mixins";
+
+#Routes {
+  .description {
+    margin-top: 0;
+    padding: 1em;
+    text-align: center;
+  }
+  & > hr {
+    margin-bottom: 2.5em;
+  }
+}
+
+#RouteOverview {
+  margin: 0;
+  padding: 0;
+
+  .singleRoute {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    @include resetList;
+    padding: 0.3em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    &__imageAndDescription {
+      padding: 0.4em;
+      .image-gallery {
+        img {
+          border-radius: 3px;
+        }
+
+      }
+      &__description {
+        padding: 0.5em;
+
+        .title {
+          font-size: 1.2em;
+          text-align: left;
+          padding: 0;
+          margin: 0;
+        }
+        .shortDescription {
+          padding: 0;
+          margin: 0;
+
+        }
+      }
+    }
+    hr {
+      width: 80%;
+      margin: 0.5em auto 1.5em;
+
+    }
+    &__infoArea {
+      padding: 0.4em;
+      &__lower, &__upper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        & > div {
+          margin: 0.2em 0;
+        }
+        p {
+          padding: 0;
+          margin: 0;
+        }
+        &__info {
+
+        }
+        .headline {
+          text-decoration: underline;
+
+        }
+        .value {
+
+        }
+      }
+    }
+    &__buttonArea {
+      border-top: 1px solid #EEEEEE;
+      padding: 1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+
+      button {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .attractionsButton {
+        color: white;
+        background: #293739;
+        svg {
+          margin-left: 0.5em;
+          fill: white;
+          height: 1.4em;
+        }
+
+      }
+      .detailsButton {
+        background: #DBBC85;
+        border-color: #DBBC85;
+        margin: 0 0.5em;
+      }
+    }
+  }
+}
+
+#RouteDetails {
+  .routeInfo {
+    .image-gallery {
+      width: calc(100% + 1.5em);
+      margin-left: -1em;
+      margin-top: -0.85em;
+    }
+    .image-gallery-slide-wrapper {
+      max-height: 30em;
+      overflow: hidden;
+    }
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      background: white;
+    }
+    &__title {
+
+    }
+    &__tabs {
+      min-height: 50vh;
+      .react-tabs__tab-list {
+        height: 1em;
+
+        h4 {
+          margin-top: -1em;
+        }
+      }
+      ol {
+        margin-top: 0;
+      }
+    }
+    &__description {
+      margin-top: 1em;
+      margin-bottom: 6em;
+
+    }
+  }
+  .infoArea {
+    padding: 0.4em;
+    margin: 2em auto;
+    &__lower, &__upper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      & > div {
+        margin: 0.2em 0;
+        width: 50%;
+      }
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      &__info {
+
+      }
+      .headline {
+        text-decoration: underline;
+
+      }
+      .value {
+
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #Routes {
+    .description {
+
+    }
+  }
+  #RouteOverview {
+
+    .singleRoute {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__infoArea {
+        &__lower, &__upper {
+          &__info {
+
+          }
+          .headline {
+
+          }
+          .value {
+
+          }
+        }
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1399px) {
+  #Routes {
+    .description {
+
+    }
+  }
+  #RouteOverview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    .singleRoute {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__infoArea {
+        &__lower, &__upper {
+          &__info {
+
+          }
+          .headline {
+
+          }
+          .value {
+
+          }
+        }
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  #Routes {
+    .description {
+
+    }
+  }
+  #RouteOverview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    .singleRoute {
+      &__imageAndDescription {
+        &__image {
+
+        }
+        &__description {
+          .title {
+
+          }
+          .shortDescription {
+
+          }
+        }
+      }
+      hr {
+
+      }
+      &__infoArea {
+        &__lower, &__upper {
+          &__info {
+
+          }
+          .headline {
+
+          }
+          .value {
+
+          }
+        }
+      }
+      &__buttonArea {
+        .attractionsButton {
+
+        }
+        .detailsButton {
+
+        }
+      }
+    }
+  }
+}

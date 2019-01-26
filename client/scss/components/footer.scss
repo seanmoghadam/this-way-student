@@ -1,0 +1,26 @@
+#Footer {
+  width: 100%;
+  border-top: 1px solid #5F7374;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8em;
+  margin-bottom: 2em;
+  a {
+    color: #535353;
+    display: block;
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}

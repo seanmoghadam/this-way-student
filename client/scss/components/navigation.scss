@@ -1,0 +1,667 @@
+#navigationContainer {
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  z-index: 900;
+  position: relative;
+  .navigationPositioner {
+    height: 5em;
+    position: fixed;
+    background: #F6F6F6;
+    width: 100%;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    flex-flow: row;
+    z-index: 1000;
+    height: 5em;
+    position: fixed;
+    left: 50%;
+    max-width: 1300px;
+    overflow: hidden;
+    transform: translateX(-50%);
+
+    .adminText {
+      margin-left: -1.3em;
+      font-size: 1.2em;
+      margin-bottom: -0.2em;
+    }
+
+    &__logo {
+      z-index: 1000;
+      position: relative;
+      &__aTag {
+        &__img {
+          width: 2.7em;
+          z-index: 1000;
+          height: 2.5em;
+          border: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &__navList {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &__item {
+        width: 80%;
+        min-width: 10em;
+        display: block;
+        margin: 1em auto;
+        max-width: 25em;
+
+        &__aTag {
+          display: block;
+          border: none;
+          background-color: #E1BB7D;
+          transition: background-color 0.3ms ease-in-out;
+          width: 100%;
+          &:hover {
+            background-color: #EB6E4B;
+          }
+          svg {
+            fill: white;
+            height: 1em;
+            margin-bottom: -0.15em;
+          }
+        }
+        .logoutButton {
+          background-color: #B72519;
+          svg {
+            transform: rotate(180deg);
+            padding-right: 0.5em;
+          }
+          &:hover {
+            background-color: red;
+          }
+        }
+        .loginButton {
+          background-color: #5CB644;
+          &:hover {
+            background-color: #229C3C;
+          }
+        }
+      }
+    }
+  }
+
+  // burger
+  .burgerContainer {
+    width: 3em;
+    height: 2em;
+    &:focus {
+      outline: none;
+    }
+    .burgerIcon {
+      position: relative;
+      height: 28px;
+      width: 36px;
+      cursor: pointer;
+      z-index: 1000;
+      &:focus {
+        outline: none;
+      }
+
+      .line-top,
+      .line-middle,
+      .line-bottom {
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 36px;
+        border-radius: 2px;
+        background: #253839;
+      }
+
+      .line-top {
+        top: 0;
+        transform-origin: 34px 2px;
+      }
+
+      .line-middle {
+        top: 12px;
+        transition: opacity 200ms linear;
+      }
+
+      .line-bottom {
+        bottom: 0;
+        transform-origin: 34px 2px;
+      }
+
+      &.is-open {
+        .line-top {
+          animation: line-top-out 300ms linear normal;
+          animation-fill-mode: forwards;
+          background: #253839;
+          transition: all ease-in-out 150ms;
+        }
+        .line-middle {
+          opacity: 0;
+        }
+        .line-bottom {
+          animation: line-bot-out 300ms linear normal;
+          animation-fill-mode: forwards;
+          background: #253839;
+          transition: all ease-in-out 150ms;
+        }
+      }
+
+      &.is-closed {
+        .line-top {
+          animation: line-top-in 300ms linear normal;
+          animation-fill-mode: forwards;
+        }
+        .line-middle {
+          transition-delay: 200ms;
+        }
+        .line-bottom {
+          animation: line-bot-in 300ms linear normal;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+
+  //default overrides
+  .activeNav {
+    border: yellow 0.5px solid;
+  }
+}
+
+#MessagePopover {
+  top: 6em;
+  position: fixed;
+  z-index: 201;
+  background: white;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 3em;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  animation: fadeInMessagePopup 3s ease-in-out;
+  max-width: 20em;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .icon {
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    svg {
+      fill: white
+    }
+    &:after {
+      width: 0.7em;
+      height: 0.7em;
+      transform: rotate(45deg);
+      position: absolute;
+      content: "";
+      right: -0.35em;
+
+    }
+  }
+  .successIcon {
+    background: green;
+    &:after {
+      background: green;
+    }
+  }
+  .failureIcon {
+    background: red;
+    &:after {
+      background: red;
+    }
+  }
+  .infoIcon {
+    background: lightblue;
+    &:after {
+      background: lightblue;
+    }
+  }
+  .messageText {
+    margin-left: 1em;
+    width: 90%;
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  #navigationContainer {
+    height: 3.35em;
+    .navigationPositioner {
+      height: 3.7em;
+    }
+    .navigation {
+      padding: 0 1em;
+      height: 3.7em;
+
+      &__logo {
+        font-size: 1.5em;
+
+        &__aTag {
+          &__img {
+
+          }
+        }
+      }
+    }
+
+    .overlay {
+
+      &__navList {
+
+        &__item {
+
+          &__aTag {
+
+            &:hover {
+            }
+          }
+          .logoutButton {
+            &:hover {
+            }
+          }
+          .loginButton {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+
+    // burger
+    .burgerContainer {
+
+      .burgerIcon {
+
+        .line-top,
+        .line-middle,
+        .line-bottom {
+
+        }
+
+        .line-top {
+
+        }
+
+        .line-middle {
+
+        }
+
+        .line-bottom {
+
+        }
+
+        &.is-open {
+          .line-top {
+
+          }
+          .line-middle {
+            opacity: 0;
+          }
+          .line-bottom {
+
+          }
+        }
+
+        &.is-closed {
+          .line-top {
+
+          }
+          .line-middle {
+
+          }
+          .line-bottom {
+
+          }
+        }
+      }
+    }
+
+    //default overrides
+    .activeNav {
+    }
+  }
+  #MessagePopover {
+
+    .icon {
+
+      svg {
+
+      }
+      &:after {
+
+      }
+    }
+    .successIcon {
+
+      &:after {
+
+      }
+    }
+    .failureIcon {
+
+      &:after {
+
+      }
+    }
+    .infoIcon {
+
+      &:after {
+
+      }
+    }
+    .messageText {
+
+      p {
+
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+  #navigationContainer {
+
+    .navigation {
+
+      &__logo {
+
+        &__aTag {
+          &__img {
+
+          }
+        }
+      }
+    }
+
+    .overlay {
+
+      &__navList {
+
+        &__item {
+
+          &__aTag {
+
+            &:hover {
+            }
+          }
+          .logoutButton {
+            &:hover {
+            }
+          }
+          .loginButton {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+
+    // burger
+    .burgerContainer {
+
+      .burgerIcon {
+
+        .line-top,
+        .line-middle,
+        .line-bottom {
+
+        }
+
+        .line-top {
+
+        }
+
+        .line-middle {
+
+        }
+
+        .line-bottom {
+
+        }
+
+        &.is-open {
+          .line-top {
+
+          }
+          .line-middle {
+          }
+          .line-bottom {
+
+          }
+        }
+
+        &.is-closed {
+          .line-top {
+
+          }
+          .line-middle {
+
+          }
+          .line-bottom {
+
+          }
+        }
+      }
+    }
+
+    //default overrides
+    .activeNav {
+    }
+  }
+  #MessagePopover {
+
+    .icon {
+
+      svg {
+
+      }
+      &:after {
+
+      }
+    }
+    .successIcon {
+
+      &:after {
+
+      }
+    }
+    .failureIcon {
+
+      &:after {
+
+      }
+    }
+    .infoIcon {
+
+      &:after {
+
+      }
+    }
+    .messageText {
+
+      p {
+
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #navigationContainer {
+
+    .navigation {
+
+      &__logo {
+
+        &__aTag {
+          &__img {
+
+          }
+        }
+      }
+    }
+
+    .overlay {
+
+      &__navList {
+
+        &__item {
+
+          &__aTag {
+
+            &:hover {
+            }
+          }
+          .logoutButton {
+            &:hover {
+            }
+          }
+          .loginButton {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+
+    // burger
+    .burgerContainer {
+
+      .burgerIcon {
+
+        .line-top,
+        .line-middle,
+        .line-bottom {
+
+        }
+
+        .line-top {
+
+        }
+
+        .line-middle {
+
+        }
+
+        .line-bottom {
+
+        }
+
+        &.is-open {
+          .line-top {
+
+          }
+          .line-middle {
+
+          }
+          .line-bottom {
+
+          }
+        }
+
+        &.is-closed {
+          .line-top {
+
+          }
+          .line-middle {
+
+          }
+          .line-bottom {
+
+          }
+        }
+      }
+    }
+
+    //default overrides
+    .activeNav {
+    }
+  }
+  #MessagePopover {
+
+    .icon {
+
+      svg {
+
+      }
+      &:after {
+
+      }
+    }
+    .successIcon {
+
+      &:after {
+
+      }
+    }
+    .failureIcon {
+
+      &:after {
+
+      }
+    }
+    .infoIcon {
+
+      &:after {
+
+      }
+    }
+    .messageText {
+
+      p {
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,105 @@
+//inspired by codepen example - https://codepen.io/marcobiedermann/pen/WbGazL
+
+$h1-font-size: 2em;
+$h1-font-weight: 900;
+
+$h2-font-size: 1.5em;
+$h2-font-weight: 300;
+
+$color: #4c4a50;
+
+$color-bg-start: #2ca6e0;
+$color-bg-end: #1766b3;
+$color-message-bg: #fff;
+
+$color-icon-x: #fff;
+$color-icon-x-bg: #ca2735;
+
+#Error {
+  min-height: 75vh;
+  background: #5F7374;
+  h2 {
+    line-height: 1.1em;
+    margin: 0;
+  }
+
+  h3 {
+    line-height: 1.1em;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .container {
+    left: 50%;
+    position: absolute;
+    top: 45vh;
+    transform: translate(-50%, -50%);
+  }
+
+  .display-table {
+    display: table;
+    width: 100%;
+  }
+
+  .display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .icon {
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+  }
+
+  .icon-left {
+    margin-right: 1em;
+  }
+
+  .icon-right {
+    margin-left: 1em;
+  }
+
+  .icon-x {
+    background-color: $color-icon-x-bg;
+    border-radius: 50%;
+    fill: $color-icon-x;
+    padding: .5em;
+    height: 2em;
+    width: 2em;
+  }
+
+  .page-404 {
+    background: radial-gradient(ellipse farthest-side at right top, $color-bg-start 0%, $color-bg-end 100%) no-repeat;
+  }
+
+  .message {
+    background-color: $color-message-bg;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    padding: 1em;
+    text-transform: uppercase;
+    border-radius: 3px;
+
+  }
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .bounceIn {
+    animation-name: bounceIn;
+    animation-duration: .75s;
+    animation-delay: 1s;
+  }
+}
+

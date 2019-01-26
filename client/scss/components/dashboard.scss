@@ -1,0 +1,52 @@
+@import "../common/mixins";
+
+#AdminDashboard {
+  h2 {
+    margin-bottom: 1em;
+  }
+  .description {
+    text-align: center;
+  }
+  .adminNavigation {
+    display: flex;
+    flex-flow: column;
+    @include resetList();
+    height: calc(60vh - 5em);
+    margin-top: 10vh;
+    &__listItem {
+      width: 100%;
+      margin: 0.5em 0;
+
+      a {
+        svg, img {
+          width: 3em;
+          margin-left: 1em;
+          fill: white;
+        }
+        height: 8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #D6BD8C;
+        border: none;
+        max-width: 30em;
+        margin: 0 auto;
+
+      }
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}
